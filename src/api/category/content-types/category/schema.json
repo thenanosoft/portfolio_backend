@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "primary": {
+      "type": "boolean",
+      "default": false
+    },
+    "secondary": {
+      "type": "boolean",
+      "default": false
+    },
+    "portfolios": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::portfolio.portfolio",
+      "mappedBy": "category"
+    }
+  }
+}

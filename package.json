@@ -1,0 +1,33 @@
+{
+  "name": "backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "build:win": "cross-env NODE_ENV=production npm run build",
+    "start:win": "cross-env NODE_ENV=production npm start"
+  },
+  "dependencies": {
+    "@strapi/plugin-graphql": "^4.4.1",
+    "@strapi/plugin-i18n": "4.4.1",
+    "@strapi/plugin-users-permissions": "4.4.1",
+    "@strapi/strapi": "4.4.1",
+    "cross-env": "^7.0.3",
+    "mysql": "2.18.1"
+  },
+  "author": {
+    "name": "Farhan Ellahi"
+  },
+  "strapi": {
+    "uuid": "6b879cb5-1069-4f0f-bdf5-b2c247e747af"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
